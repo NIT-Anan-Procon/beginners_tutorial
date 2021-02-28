@@ -1,0 +1,2 @@
+# beginners_tutorial
+1年生部員向けの支援サイト用リポジトリ
