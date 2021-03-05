@@ -1,39 +1,41 @@
-all = "";
-if (file1 !== "in")
-  if (file === "00-02.html")
-    all = "<a href='index.html' class=bottomLeft>← 前に戻る</a>";
-  else if (file2 === "01")
-    all =
+if (file_name_first != 0 && file_name_first != "NaN")
+  if (file_name_first == 1 && file_name_last == 1)
+    in_html = "<a href='index.html' class=bottom_left>← 前に戻る</a>";
+  else if (file_name_last == 1)
+    in_html =
       "<a href='" +
-      ("00" + (Number(file1) - 1)).slice(-2) +
-      ("00" + (content[Number(file1) - 1].length - 1)).slice(-2) +
-      ".html' class=bottomLeft>← 前に戻る</a>";
+      ("00" + (file_name_first - 1)).slice(-2) +
+      ("00" + (big_middle_header_box[file_name_first - 1].length - 1)).slice(
+        -2
+      ) +
+      ".html' class=bottom_left>← 前に戻る</a>";
   else
-    all =
+    in_html =
       "<a href='" +
-      file1 +
+      ("00" + file_name_first).slice(-2) +
       "-" +
-      ("00" + (Number(file2) - 1)).slice(-2) +
-      ".html' class=bottomLeft>前に戻る →</a>";
-all += "<a href='#header' class=bottomCenter>ページトップへ</a>";
-if (file1 === "in")
-  all += "<a href='00-02.html' class=bottomRight>次へ進む →</a>";
-else if (
+      ("00" + (file_name_last - 1)).slice(-2) +
+      ".html' class=bottom_left>← 前に戻る</a>";
+else in_html = "<a class=bottom_left></a>";
+in_html += "<a href='#header' class=bottom_center>ページトップへ</a>";
+if (
+  file_name_first != "NaN" &&
   !(
-    content[Number(file1)].length - 1 == Number(file2) &&
-    content[Number(file1) + 1].length <= 1
+    big_middle_header_box[file_name_first].length - 1 == file_name_last &&
+    big_middle_header_box[file_name_first + 1].length <= 1
   )
 )
-  if (content[Number(file1)].length - 1 == Number(file2))
-    all +=
+  if (big_middle_header_box[file_name_first].length - 1 == file_name_last)
+    in_html +=
       "<a href='" +
-      ("00" + (Number(file1) + 1)).slice(-2) +
-      "-01.html' class=bottomRight>次へ進む →</a>";
+      ("00" + (file_name_first + 1)).slice(-2) +
+      "-01.html' class=bottom_right>次へ進む →</a>";
   else
-    all +=
+    in_html +=
       "<a href='" +
-      file1 +
+      ("00" + file_name_first).slice(-2) +
       "-" +
-      ("00" + Number(file2 + 1)).slice(-2) +
-      ".html' class=bottomRight>次へ進む →</a>";
-bottom.innerHTML = all;
+      ("00" + (file_name_last + 1)).slice(-2) +
+      ".html' class=bottom_right>次へ進む →</a>";
+else in_html += "<a class=bottom_right></a>";
+bottom.innerHTML = in_html;

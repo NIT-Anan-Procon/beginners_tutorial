@@ -7,6 +7,8 @@ $("#code").each(function () {
     [*][0]に付与したい色のカラーネーム,またはカラーコード、[*][1~]に色を変えたい単語
     intとpr"int"などその単語が含まれる別の単語が存在する場合、前に@を付けるようにしてください
     文字列に対しては「s@」と「@s」で囲ってください（例：s@"文字列"@s）
+    コメントアウトに対しては「c@」と「@c」で囲ってください（例：c@"文字列"@c）
+    独自のメソッド名に対してはm@」と「@m」で囲ってください（例：m@"文字列"@m）
 
     -------------------------------------------------------------------------------------------- */
 
@@ -24,11 +26,11 @@ $("#code").each(function () {
 
     ============================================================================================ */
   ];
-  let all = "$(this).html(txt";
+  let in_html = "$(this).html(txt";
   for (let i = 0; i < color.length; i++)
     for (let j = 1; j < color[i].length; j++)
       if (color[i][j].slice(0, 1) === "@")
-        all +=
+        in_html +=
           ".replace(/" +
           color[i][j] +
           "/g,'<span style=\" color:" +
@@ -37,7 +39,7 @@ $("#code").each(function () {
           color[i][j].slice(1) +
           "</span>')";
       else
-        all +=
+        in_html +=
           ".replace(/" +
           color[i][j] +
           "/g,'<span style=\"color:" +
@@ -45,10 +47,12 @@ $("#code").each(function () {
           '">' +
           color[i][j] +
           "</span>')";
-  all += ".replace(/s@/g,'<span style=\"color:#f08080\">')";
-  all += ".replace(/@s/g,'</span>')";
-  all += ".replace(/m@/g,'<span style=\"color:#f0e68c\">')";
-  all += ".replace(/@m/g,'</span>')";
-  all += ");";
-  eval(all);
+  in_html += ".replace(/s@/g,'<span style=\"color:#f08080\">')";
+  in_html += ".replace(/@s/g,'</span>')";
+  in_html += ".replace(/c@/g,'<span style=\"color:#a0c238\">')";
+  in_html += ".replace(/@c/g,'</span>')";
+  in_html += ".replace(/m@/g,'<span style=\"color:#f0e68c\">')";
+  in_html += ".replace(/@m/g,'</span>')";
+  in_html += ");";
+  eval(in_html);
 });

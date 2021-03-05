@@ -7,14 +7,14 @@ if (file_name_first === "in" || file_name_first === "") {
   file_name_last = 1;
 }
 if (file_name_first === "en")
-  in_html = "<h1>" + sub_content_header[0][0] + "</h1>";
+  in_html = "<h1>" + sub_content_header_box[0][0] + "</h1>";
 else if (file_name_first === "an")
-  in_html = "<h1>" + sub_content_header[1][0] + "</h1>";
+  in_html = "<h1>" + sub_content_header_box[1][0] + "</h1>";
 else if (file_name_first === "de")
-  in_html = "<h1>" + sub_content_header[2][0] + "</h1>";
+  in_html = "<h1>" + sub_content_header_box[2][0] + "</h1>";
 else {
   file_name_first = Number(file_name_first);
-  in_html = "<h1>" + big_middle_header[file_name_first][0] + "</h1>";
+  in_html = "<h1>" + big_middle_header_box[file_name_first][0] + "</h1>";
 }
 
 big_header.innerHTML += in_html;
