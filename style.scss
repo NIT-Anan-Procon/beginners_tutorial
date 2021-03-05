@@ -11,9 +11,17 @@ body {
   grid-template:
     "header header" 70px
     "...    main  " 1fr
+    "...    ...   " 50px
     "footer footer" 70px
     /20% 1fr;
-
+  @media screen and (max-width: 1000px) {
+    grid-template:
+      "header header header" 70px
+      "...    main   ...   " 1fr
+      "...    ...    ...   " 50px
+      "footer footer footer" 70px
+      /10% 1fr 10%;
+  }
   header {
     display: grid;
     align-items: center;
@@ -52,6 +60,14 @@ body {
     grid-template:
       "content ... table"
       /62% 13% 25%;
+
+    @media screen and (max-width: 1000px) {
+      grid-template:
+        "content content content"
+        "...     ...     ...    " 20px
+        "...     table   ...    "
+        /10% 90% 0px;
+    }
     h1 {
       display: inline-block;
       font-size: 2.3rem;
@@ -150,7 +166,7 @@ body {
       h4 {
         font-size: 1.2rem;
       }
-      ol {
+      ul {
         min-width: 75%;
         max-width: 75%;
         padding: 0.5em 0px 0.5em 1.5em;
@@ -170,17 +186,9 @@ body {
     grid-area: footer;
     small {
       margin: 6px;
+      @media screen and (max-width: 1000px) {
+        font-size: 8px;
+      }
     }
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  body {
-    grid-template:
-      "header header header" 70px
-      "...    main   ...   " 1fr
-      "...    table  ...   " 1fr
-      "footer footer footer" 70px
-      /10% 1fr 10%;
   }
 }
