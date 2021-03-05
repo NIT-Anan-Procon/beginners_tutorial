@@ -5,37 +5,39 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="style.css">
 	<title>プロコン部1年生チュートリアル</title>
-	<link rel="icon" href="icon.ico">
+	<link rel="img/icon" href="img/icon.ico">
 </head>
 
 <body>
 	<header id=header>
-		<script src="header.js"></script>
+		<script src="00-header.js"></script>
 	</header>
 	<main>
 		<article>
 			<div id=big_header>
-				<script src="big_header.js"></script>
+				<script src="js/big_header.js"></script>
 			</div>
 			<div id=middle_header>
-				<script src="middle_header.js"></script>
+				<script src="js/middle_header.js"></script>
 			</div>
 			<nav id=navigation>
-				<script src="navigation.js"></script>
+				<script src="js/navigation.js"></script>
 			</nav>
 			<section>
 				<div id=small_header1>
-					<script src="small_header.js"></script>
+					<script src="js/small_header.js"></script>
 				</div>
 				<p>
 					<red>
 						ここは編集者向けページです。
 					</red>
+					<br>
+					簡単な説明は書いておきますが、分からない場合はネットで調べたり、専用Slackチャンネル、もしくは折上にメッセージをください。
 				</p>
 				<p>
-					まずは
+					まずは、
 					<b>
-						header.js
+						00-header.js
 					</b>
 					に行って作成する話数の配列のところへ
 					<red>
@@ -49,27 +51,37 @@
 					<red>
 						小見出し
 					</red>
-					を追加してください。
+					を追加してください。詳しくはコメントアウトを読んでください。
+					<br>
+					大見出しと中見出しは
+					<b>
+						big_middle_header_box
+					</b>
+					へ、小見出しは
+					<b>
+						small_header_box
+					</b>
+					へ入れてください。
 				</p>
 				<p>
 					次に、
 					<b>
-						model.html
+						00-model.html
 					</b>
 					をコピーして
 					<red>
-						"話数-ページ.html"
+						"2桁の話数-2桁のページ数(中見出しごと).html"
 					</red>
-					という名前のファイルを作成してください。（例：01-01.html）
+					という名前のファイルを作成してください。（例：1話の1ページ目⇒01-01.html）
 				</p>
 				<p>
-					最後に、作成したファイルの中身を編集していってください。
+					最後に、作成したファイルの中身を編集していってください。詳しくはコメントアウトを読んでください。
 				</p>
 				<hr>
 			</section>
 			<section>
 				<div id=small_header2>
-					<script src="small_header.js"></script>
+					<script src="js/small_header.js"></script>
 				</div>
 				<p>
 					ページ作成におすすめのタグは、以下の通りです。
@@ -91,11 +103,11 @@
 						<li>
 							<b>
 								<red>
-									hr：水平
+									hr：水平罫線
 								</red>
 							</b>
 							<p>
-								記事の一番下、section閉じタグの上に必ず入れてください。閉じタグはいりません。
+								記事の一番下、section閉じタグの上に必ず入れてください。閉じタグはいりません。それ以外で自由に使ってもらっても構いません。
 							</p>
 						</li>
 						<li>
@@ -124,14 +136,6 @@
 						</li>
 						<li>
 							<b>
-								span：文字デザイン
-							</b>
-							<p>
-								部分的な文字の装飾をしたいときに囲ってください。
-							</p>
-						</li>
-						<li>
-							<b>
 								br：改行
 							</b>
 							<p>
@@ -140,26 +144,10 @@
 						</li>
 						<li>
 							<b>
-								a：リンク
-							</b>
-							<p>
-								リンクを入れたいときに囲ってください。属性にhref="URL,パス"で使用できます。
-							</p>
-						</li>
-						<li>
-							<b>
 								ul,ol,li：箇条書き
 							</b>
 							<p>
-								箇条書きを入れたいときに囲ってください。まずulタグまたはolタグで外の囲いを作り、箇条書きにしたい要素をliタグで囲います。ulタグと違いolタグは番号付きです。
-							</p>
-						</li>
-						<li>
-							<b>
-								table,th,tr,td：表
-							</b>
-							<p>
-								表を入れたいときにtableタグで囲ってください。詳しくは調べてみてください。
+								箇条書きを入れたいときに囲ってください。まずulタグまたはolタグで外の囲いを作り、箇条書きにしたい要素をliタグで囲います。ulタグと違いolタグは番号付きです。詳しくは調べてみてください。
 							</p>
 						</li>
 						<li>
@@ -181,19 +169,64 @@
 					</ul>
 				</p>
 				<hr>
+				<p>
+					一応よく使われるタグも載せておきます。メインは上記のタグだけで大丈夫なはずです。
+					<ul>
+						<li>
+							<b>
+								span：文字デザイン
+							</b>
+							<p>
+								部分的な文字の装飾をしたいときに囲ってください。詳しくは調べてみてください。
+							</p>
+						</li>
+						<li>
+							<b>
+								a：リンク
+							</b>
+							<p>
+								リンクを入れたいときに囲ってください。属性にhref="URL,パス"で使用できます。
+							</p>
+						</li>
+						<li>
+							<b>
+								table,th,tr,td：表
+							</b>
+							<p>
+								表を入れたいときにtableタグで囲ってください。詳しくは調べてみてください。
+							</p>
+						</li>
+					</ul>
+				</p>
+				<hr>
+			</section>
+			<section>
+				<div id=small_header3>
+					<script src="js/small_header.js"></script>
+				</div>
+				<p>
+					ソースコード内で新しく色をつけたい単語を設定することができます。
+				</p>
+				<p>
+					まず、
+					<b>
+						00-code.js
+					</b>
+					に行ってください。詳しくはコメントアウトを読んでください。
+				</p>
 			</section>
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-			<script src="code.js"></script>
+			<script src="00-code.js"></script>
 			<div id=bottom>
-				<script src="bottom.js"></script>
+				<script src="js/bottom.js"></script>
 			</div>
 		</article>
 		<aside id=table>
-			<script src="table.js"></script>
+			<script src="js/table.js"></script>
 		</aside>
 	</main>
 	<footer id=footer>
-		<script src="footer.js"></script>
+		<script src="js/footer.js"></script>
 	</footer>
 </body>
 
