@@ -9,4 +9,5 @@ for (let i = 0; i < big_middle_header_box.length; i++) {
   }
   in_html += "</ul>";
 }
+
 table.innerHTML += in_html;

@@ -1,3 +1,4 @@
+file_name_first = Number(file_name_first);
 if (file_name_first != 0 && file_name_first != "NaN")
   if (file_name_first == 1 && file_name_last == 1)
     in_html = "<a href='index.html' class=bottom_left>← 前に戻る</a>";
@@ -38,4 +39,5 @@ if (
       ("00" + (file_name_last + 1)).slice(-2) +
       ".html' class=bottom_right>次へ進む →</a>";
 else in_html += "<a class=bottom_right></a>";
+
 bottom.innerHTML = in_html;
