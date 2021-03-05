@@ -17,6 +17,10 @@ body {
   }
 }
 
+body a:hover {
+  text-decoration: none;
+}
+
 body header {
   display: -ms-grid;
   display: grid;
@@ -51,10 +55,6 @@ body header a .another {
 
 body header a .developer {
   grid-area: developer;
-}
-
-body header a:hover {
-  text-decoration: none;
 }
 
 body main {

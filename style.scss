@@ -22,6 +22,9 @@ body {
       "footer footer footer" 70px
       /10% 1fr 10%;
   }
+  a:hover {
+    text-decoration: none;
+  }
   header {
     display: grid;
     align-items: center;
@@ -47,9 +50,6 @@ body {
       }
       .developer {
         grid-area: developer;
-      }
-      &:hover {
-        text-decoration: none;
       }
     }
   }
