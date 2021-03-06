@@ -2,7 +2,6 @@ in_html = "<nav><ul>";
 if (file_name_first != 0) {
   if (file_name_first === "en") setSubNavigation(0);
   else if (file_name_first === "an") setSubNavigation(1);
-  else if (file_name_first === "de") setSubNavigation(2);
   else
     for (
       let i = 0;

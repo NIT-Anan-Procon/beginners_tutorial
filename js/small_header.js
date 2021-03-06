@@ -1,7 +1,6 @@
 in_html = "<h3 id=P";
 if (file_name_first === "en") setSubSmallHeader(0);
 else if (file_name_first === "an") setSubSmallHeader(1);
-else if (file_name_first === "de") setSubSmallHeader(2);
 else
   in_html +=
     small_header_counter +

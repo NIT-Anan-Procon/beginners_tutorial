@@ -31,7 +31,7 @@ body header {
   text-align: center;
   background-color: #ffcc66;
   grid-area: header;
-  grid-template: "logo environment another developer" 1fr /40% 20% 20% 20%;
+  grid-template: "logo environment another" 1fr /40% 30% 30%;
 }
 
 @media screen and (max-width: 1000px) {
@@ -39,7 +39,6 @@ body header {
     grid-template: "logo";
   }
   body header .environment,
-  body header .developer,
   body header .another {
     display: none;
   }
@@ -63,10 +62,6 @@ body header a .environment {
 
 body header a .another {
   grid-area: another;
-}
-
-body header a .developer {
-  grid-area: developer;
 }
 
 body main {

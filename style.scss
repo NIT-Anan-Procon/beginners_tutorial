@@ -33,12 +33,11 @@ body {
     background-color: #ffcc66;
     grid-area: header;
     grid-template:
-      "logo environment another developer" 1fr
-      /40% 20% 20% 20%;
+      "logo environment another" 1fr
+      /40% 30% 30%;
     @media screen and (max-width: 1000px) {
       grid-template: "logo";
       .environment,
-      .developer,
       .another {
         display: none;
       }
@@ -56,9 +55,6 @@ body {
       }
       .another {
         grid-area: another;
-      }
-      .developer {
-        grid-area: developer;
       }
     }
   }
