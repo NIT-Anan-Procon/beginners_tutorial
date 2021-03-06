@@ -13,7 +13,7 @@ body {
 
 @media screen and (max-width: 1000px) {
   body {
-    grid-template: "header header header" 70px "...    main   ...   " 1fr "...    ...    ...   " 50px "footer footer footer" 70px /10% 80% 10%;
+    grid-template: "header header header" 70px "...    main   ...   " 1fr "...    ...    ...   " 50px "footer footer footer" 70px /5% 90% 5%;
     max-width: 100%;
   }
 }
@@ -78,9 +78,9 @@ body main {
 
 @media screen and (max-width: 1000px) {
   body main {
-    grid-template: "content content content" "...     ...     ...    " 20px "...     table   ...    " /10% 90% 0px;
-    font-size: 1.7rem;
-    line-height: 2rem;
+    grid-template: "content content content" "...     ...     ...    " 20px "...     table   ...    " /10% 80% 10%;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -149,8 +149,8 @@ body main article nav ul li {
 
 @media screen and (max-width: 1000px) {
   body main article nav ul li {
-    font-size: 1.5rem;
-    line-height: 1.8rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
     padding-right: 1.2rem;
   }
 }
@@ -213,6 +213,12 @@ body main article #bottom {
   display: -ms-grid;
   display: grid;
   grid-template: "... left center right ..." /15% 20% 30% 20% 15%;
+}
+
+@media screen and (max-width: 1000px) {
+  body main article #bottom {
+    grid-template: "left center right" /30% 40% 30%;
+  }
 }
 
 body main article #bottom .bottom_left {

@@ -20,7 +20,7 @@ body {
       "...    main   ...   " 1fr
       "...    ...    ...   " 50px
       "footer footer footer" 70px
-      /10% 80% 10%;
+      /5% 90% 5%;
     max-width: 100%;
   }
   a:hover {
@@ -75,9 +75,9 @@ body {
         "content content content"
         "...     ...     ...    " 20px
         "...     table   ...    "
-        /10% 90% 0px;
-      font-size: 1.7rem;
-      line-height: 2rem;
+        /10% 80% 10%;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
     }
     h1 {
       display: inline-block;
@@ -126,8 +126,8 @@ body {
           border-left: solid 6px #1fa67a;
           background: whitesmoke;
           @media screen and (max-width: 1000px) {
-            font-size: 1.5rem;
-            line-height: 1.8rem;
+            font-size: 1.2rem;
+            line-height: 1.5rem;
             padding-right: 1.2rem;
           }
           a {
@@ -183,6 +183,11 @@ body {
         grid-template:
           "... left center right ..."
           /15% 20% 30% 20% 15%;
+        @media screen and (max-width: 1000px) {
+          grid-template:
+            "left center right"
+            /30% 40% 30%;
+        }
         .bottom_left {
           grid-area: left;
         }
