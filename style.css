@@ -193,6 +193,14 @@ body main article section pre {
   background: #25292f;
   -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.22);
           box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.22);
+  overflow: auto;
+}
+
+@media screen and (max-width: 1000px) {
+  body main article section pre {
+    padding-right: 40px;
+    width: 80%;
+  }
 }
 
 body main article section hr {
