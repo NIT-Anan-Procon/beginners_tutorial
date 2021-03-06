@@ -2,7 +2,7 @@
 
 [GitHub Pages](https://nit-anan-procon.github.io/beginners_tutorial/)
 
-## GitHub Flowについて
+## GitHub Flow について
 本リポジトリは、[GitHub Flow](https://www.atmarkit.co.jp/ait/articles/1708/01/news015.html#02)を用いて運用しています。
 
 - `main` ブランチは常にデプロイ可能である必要があります。
@@ -114,5 +114,7 @@
 表を入れたいときに `table` タグで囲ってください。詳しくは調べてみてください。
 
 ### ソースコードの色設定
+
 ソースコード内の単語に自動で色を付けるように設定してあります。
+
 記事の中にソースコードを入れたいときや、新しく色を付けたい単語を増やすときは `00-code.js` を編集してください。詳しくはコメントアウトを読んでください。
