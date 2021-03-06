@@ -121,6 +121,7 @@ body main article h2 {
     font-size: 2rem;
     line-height: 2.3rem;
     padding-right: 1.2rem;
+    margin: 1rem 0px 1rem 0px;
   }
 }
 
@@ -187,7 +188,7 @@ body main article section pre {
   margin: 1em 0px;
   padding: 0.05em 1.5em;
   padding-top: 20px;
-  padding-right: 80px;
+  padding-right: 5%;
   color: #fff;
   border-top: solid 5px #5d627b;
   background: #25292f;
@@ -198,8 +199,7 @@ body main article section pre {
 
 @media screen and (max-width: 1000px) {
   body main article section pre {
-    padding-right: 40px;
-    width: 80%;
+    width: 90%;
   }
 }
 
