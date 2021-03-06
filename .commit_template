@@ -1,7 +1,6 @@
-
-
 # ==================== Emojis ====================
-# 🎉  :tada: 初めてのコミット（Initial Commit）
+
+# 🎉  :first: 初めてのコミット（Initial Commit）
 # 🔖  :bookmark: バージョンタグ（Version Tag）
 # ✨  :sparkles: 新機能（New Feature）
 # 🐛  :bug: バグ修正（Bagfix）
@@ -14,7 +13,6 @@
 # 💩  :hankey: 非推奨追加（Deprecation）
 # 🗑️  :wastebasket: 削除（Removal）
 # 🚧  :construction: WIP(Work In Progress)
-
 
 # ==================== Format ====================
 # :emoji: Subject
