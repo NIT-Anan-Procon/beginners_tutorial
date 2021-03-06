@@ -5,7 +5,7 @@ body {
   display: -ms-grid;
   display: grid;
   min-height: 100vh;
-  margin: 0px auto;
+  margin: 0 auto;
   color: #212121;
   background-color: #f8f8f8;
   grid-template: "header header" 70px "...    main  " 1fr "...    ...   " 50px "footer footer" 70px /20% 80%;
@@ -13,8 +13,8 @@ body {
 
 @media screen and (max-width: 1000px) {
   body {
-    grid-template: "header header header" 70px "...    main   ...   " 1fr "...    ...    ...   " 50px "footer footer footer" 70px /5% 90% 5%;
     max-width: 100%;
+    grid-template: "header header header" 70px "...    main   ...   " 1fr "...    ...    ...   " 50px "footer footer footer" 70px /5% 90% 5%;
   }
 }
 
@@ -29,9 +29,9 @@ body header {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background-color: #ffcc66;
+  background-color: #fc6;
   grid-area: header;
-  grid-template: "logo environment another developer" 1fr /40% 20% 20% 20%;
+  grid-template: "logo environment another" 1fr /38% 31% 31%;
 }
 
 @media screen and (max-width: 1000px) {
@@ -39,7 +39,6 @@ body header {
     grid-template: "logo";
   }
   body header .environment,
-  body header .developer,
   body header .another {
     display: none;
   }
@@ -52,9 +51,17 @@ body header a {
 body header a img {
   width: 100%;
   height: 100%;
+  margin-left: 20px;
   -o-object-fit: contain;
      object-fit: contain;
   grid-area: logo;
+}
+
+@media screen and (max-width: 1000px) {
+  body header a img {
+    max-height: 70px;
+    margin-left: 0;
+  }
 }
 
 body header a .environment {
@@ -65,30 +72,26 @@ body header a .another {
   grid-area: another;
 }
 
-body header a .developer {
-  grid-area: developer;
-}
-
 body main {
-  grid-area: main;
   display: -ms-grid;
   display: grid;
+  grid-area: main;
   grid-template: "content ... table" /62% 13% 25%;
 }
 
 @media screen and (max-width: 1000px) {
   body main {
-    grid-template: "content content content" "...     ...     ...    " 20px "...     table   ...    " /10% 80% 10%;
     font-size: 1.2rem;
     line-height: 1.5rem;
+    grid-template: "content content content" "...     ...     ...    " 20px "...     table   ...    " /10% 80% 10%;
   }
 }
 
 body main h1 {
-  display: inline-block;
   font-size: 2.3rem;
   line-height: 2.6rem;
-  margin-top: 2rem;
+  display: inline-block;
+  margin-top: 3rem;
   padding: 1rem;
   padding-right: 4rem;
   border-bottom: solid 3px #516ab6;
@@ -97,8 +100,9 @@ body main h1 {
 
 @media screen and (max-width: 1000px) {
   body main h1 {
-    font-size: 2rem;
-    line-height: 2.3rem;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    margin-top: 1.5rem;
     padding-right: 1.2rem;
   }
 }
@@ -112,23 +116,23 @@ body main article h2 {
   font-size: 2.8rem;
   font-weight: bolder;
   line-height: 3.1rem;
+  margin: 3.5rem 0 4rem 0;
   text-align: center;
-  margin: 4rem 0px 4rem 0px;
 }
 
 @media screen and (max-width: 1000px) {
   body main article h2 {
     font-size: 2rem;
     line-height: 2.3rem;
+    margin: 1rem 0 1rem 0;
     padding-right: 1.2rem;
-    margin: 1rem 0px 1rem 0px;
   }
 }
 
 body main article nav ul {
   display: inline-block;
-  padding: 0px;
-  margin: 0px 0px 1rem 3rem;
+  margin: 0 0 1rem 3rem;
+  padding: 0;
 }
 
 @media screen and (max-width: 1000px) {
@@ -173,8 +177,8 @@ body main article section h3:before {
   font-size: 1em;
   font-weight: 900;
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   content: "\2714";
   color: #5ab9ff;
 }
@@ -185,16 +189,16 @@ body main article section red {
 
 body main article section pre {
   display: inline-block;
-  margin: 1em 0px;
+  overflow: auto;
+  margin: 1em 0;
   padding: 0.05em 1.5em;
   padding-top: 20px;
   padding-right: 5%;
   color: #fff;
   border-top: solid 5px #5d627b;
   background: #25292f;
-  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.22);
-          box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.22);
-  overflow: auto;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
 }
 
 @media screen and (max-width: 1000px) {
@@ -204,14 +208,14 @@ body main article section pre {
 }
 
 body main article section hr {
-  margin: 40px 0px 30px 0px;
+  margin: 40px 0 30px 0;
 }
 
 body main article #bottom {
-  margin-bottom: 50px;
-  text-align: center;
   display: -ms-grid;
   display: grid;
+  margin-bottom: 50px;
+  text-align: center;
   grid-template: "... left center right ..." /15% 20% 30% 20% 15%;
 }
 
@@ -244,7 +248,7 @@ body main aside h4 {
 body main aside ul {
   min-width: 75%;
   max-width: 75%;
-  padding: 0.5em 0px 0.5em 1.5em;
+  padding: 0.5em 0 0.5em 1.5em;
   color: #1e366a;
   border-top: solid #1e366a 1px;
   border-bottom: solid #1e366a 1px;
@@ -252,11 +256,11 @@ body main aside ul {
 
 body main aside ul li {
   line-height: 1.5;
-  padding: 0.5em 0px;
+  padding: 0.5em 0;
 }
 
 body footer {
-  background-color: #ffcc66;
+  background-color: #fc6;
   grid-area: footer;
 }
 

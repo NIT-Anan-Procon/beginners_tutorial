@@ -47,26 +47,18 @@ let small_header_box = [
   [
     // ↓3話
     ["変数という箱", "変数の宣言", "変数の代入"],
-    ["データ型", "数値を入れる型", "文字を入れる型"]
+    ["データ型", "数値を入れる型", "文字を入れる型"],
   ],
   /* =========================================================================================== */
 ];
 let sub_content_header_box = [
   ["環境構築編", "JDKとVSCode", "JDK", "VSCode"],
   ["番外編", "別言語,GitHub,プレゼン資料", "別言語", "GitHub", "プレゼン資料"],
-  [
-    "編集者へ",
-    "編集指南書",
-    "ページの作り方",
-    "タグの使い方",
-    "ソースコードの色設定",
-  ],
 ];
 let in_html =
-  "<a href='index.html' class=logo><img src='img/logo.png' alt='ロゴ'></a>" +
+  "<a href='index.html'><img src='img/logo.png' alt='ロゴ'></a>" +
   "<a href ='environment.html' class=environment>MyPCを持っている子は<br>こちら(環境構築編)</a>" +
-  "<a href='another.html' class=another>別のことがしたい子は<br>こちら(番外編)</a>" +
-  "<a href='developer.html' class=developer>デベロッパーへ</a>";
+  "<a href='another.html' class=another>別のことがしたい子は<br>こちら(番外編)</a>";
 let small_header_counter = 1;
 
 header.innerHTML = in_html;
