@@ -46,9 +46,10 @@ let small_header_box = [
 
   [
     // ↓3話
-    ["変数という箱", "変数の宣言と代入"]
-    ["データ型", "数値を入れる型", "文字を入れる型"]
-  ]
+    ["変数という箱", "変数の宣言と代入"][
+      ("データ型", "数値を入れる型", "文字を入れる型")
+    ],
+  ],
   /* =========================================================================================== */
 ];
 let sub_content_header_box = [
@@ -63,7 +64,7 @@ let sub_content_header_box = [
   ],
 ];
 let in_html =
-  "<a href='index.html'><img src='img/logo.png' alt='ロゴ'></a>" +
+  "<a href='index.html' class=logo><img src='img/logo.png' alt='ロゴ'></a>" +
   "<a href ='environment.html' class=environment>MyPCを持っている子は<br>こちら(環境構築編)</a>" +
   "<a href='another.html' class=another>別のことがしたい子は<br>こちら(番外編)</a>" +
   "<a href='developer.html' class=developer>デベロッパーへ</a>";
