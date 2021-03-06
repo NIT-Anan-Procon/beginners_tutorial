@@ -24,16 +24,10 @@
       <nav id=navigation>
         <script src="js/navigation.js"></script>
       </nav>
-
-      <!-- ↓編集部分：増やすときは<section>~</section>をコピペしてください -->
       <section>
-
-        <!-- small_headerの後ろに記事ごとの番号を付けてください -->
         <div id=small_header1>
           <script src="js/small_header.js"></script>
         </div>
-
-        <!-- ↓本文：書き方等はデベロッパーページへ -->
         <p>
          「変数」といきなり言われても何のことかわからないと思います。変数とは
           <red>
@@ -42,44 +36,81 @@
           のことです。また、データとは数値や文字列のことです。
         </p>
         <p>
-          これを使えば、計算結果を保存したり何度も同じ文字列を使い回したりできます。
+          これを使えば、計算結果を保存したり、いちいち何度も同じ文字列を書かなくても使い回したりできます。
+        </p>
+        <p>
+          変数は
+          <red>
+            自分の好きな名前
+          </red>
+          を付けます。これによって何を入れたのかわかりやすくなり、。
         </p>
         <hr>
-        <!-- ↑本文：最後には<hr>で下線を引いてください -->
-
       </section>
 
       <section>
-
-        <!-- small_headerの後ろに記事ごとの番号を付けてください -->
         <div id=small_header2>
           <script src="js/small_header.js"></script>
         </div>
-
-        <!-- ↓本文 -->
         <p>
-          
+          変数の使い方を説明します。
+        </p>
+        <p>
+          まず、変数を使うためには
+          <red>
+            変数の宣言
+          </red>
+          を行います。
+          <br>
+          変数の宣言には<b>「型名」</b>と<b>「変数名」</b>を書く必要があります。
+          <pre id=code>
+型名 変数名; 
+          </pre>
+        </p>
+        <p>
+        <b>型名</b>とは変数が入れられるデータを決めるものす。
+        <br>
+        （詳しくは「<a href="03-02.html">変数の種類</a>」を参照）
+        </p>        
+        <p>
+        <b>変数名</b>とはそのままの意味で、変数の名前のことです。
+        <br>
+          変数の使い方にはいくつかルールがあります。
+          <ul>
+            <li>
+                名前に使える文字は<red>英数字及びアンダーバー</red>です。
+            </li>
+            <li>
+                ただし、<red>一文字目に数字</red>を用意てはいけません
+            </li>
+            <li>
+              大文字と小文字は区別されます。
+            </li>
+            <li>
+              <red>予約語</red>は使用できない。(例:public ,intなど)
+            </li>
+          </ul>
         </p>
         <hr>
-        <!-- ↑本文 -->
-
       </section>
-
       <section>
-
-        <!-- small_headerの後ろに記事ごとの番号を付けてください -->
         <div id=small_header3>
           <script src="js/small_header.js"></script>
         </div>
-
-        <!-- ↓本文 -->
         <p>
+          変数が使えるようになったので、変数に記憶させてみましょう。
+          <br>
+          変数にデータを記憶させることを
+          <red>
+            代入
+          </red>
+          といい、やり方は以下の通りです。
         </p>
+        <pre id=code>
+変数名 = 代入するデータ; 
+        </pre>
         <hr>
-        <!-- ↑本文 -->
-
       </section>
-      <!-- ↑編集部分 -->
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
       <script src="00-code.js"></script>
