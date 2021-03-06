@@ -1,7 +1,5 @@
 # 阿南高専 プログラミング同好会 1年生向けチュートリアルサイト
 
-> 1年生部員向けチュートリアルサイト用リポジトリの説明とルール
-
 [GitHub Pages](https://nit-anan-procon.github.io/beginners_tutorial/)
 
 ## GitHub Flowについて
@@ -21,7 +19,7 @@
 
 無理に英語を使う必要はありません。
 
-追加した機能や記事について短く、わかりやすく書きましょう
+追加した機能や記事について短く、わかりやすく書きましょう。
 
 ## [gitmoji](https://gitmoji.dev/) について
 
@@ -38,19 +36,19 @@
   🔨 :hammer: 機能を変更
   🩹 :adhesive_bandage: 軽微なバグを修正
   🚑 :ambulance: 重大なバグを修正
-  ✏️ :pencil2: タイプミスを修正
+  ✏️  :pencil2: タイプミスを修正
   📝 :memo: ドキュメントを追加、更新
   🎨 :art: デザイン、UI を更新
-  ♻️ :recycle: ソースコードを整理
+  ♻️  :recycle: ソースコードを整理
   💬 :speech_balloon: コメントアウトの追加、更新
-  🔥 :fire: コード、ファイルを削除
+  🔥  :fire: コード、ファイルを削除
   🚚 :truck: ファイルを移動、名前変更
 
 - Sub Emoji
   ⏪ :rewind: 変更を元に戻す
   ♿️ :wheelchair: 使いやすさの向上
-  ⚗ :alembic: プログラムをテスト
-  📱 :iphone: スマホ対応デザインを更新
+  ⚗  :alembic: プログラムをテスト
+  📱  :iphone: スマホ対応デザインを更新
   🔀 :twisted_rightwards_arrows: ブランチをマージ
   💩 :poop: 酷いコードを追加
 ```
