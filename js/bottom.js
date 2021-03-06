@@ -7,7 +7,10 @@ $win.on("load resize", function () {
   } else {
     bottom_txt("← 前へ", "トップへ", "次へ →");
   }
+
+  bottom.innerHTML = in_html;
 });
+
 function bottom_txt(left_txt, center_txt, right_txt) {
   if (file_name_first != 0 && file_name_first != "NaN")
     if (file_name_first == 1 && file_name_last == 1)
@@ -57,6 +60,4 @@ function bottom_txt(left_txt, center_txt, right_txt) {
         right_txt +
         "</a>";
   else in_html += "<a class=bottom_right></a>";
-
-  bottom.innerHTML = in_html;
 }
