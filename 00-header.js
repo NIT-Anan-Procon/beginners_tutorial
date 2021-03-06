@@ -56,7 +56,7 @@ let sub_content_header_box = [
   ["番外編", "別言語,GitHub,プレゼン資料", "別言語", "GitHub", "プレゼン資料"],
 ];
 let in_html =
-  "<a href='index.html' class=logo><img src='img/logo.png' alt='ロゴ'></a>" +
+  "<a href='index.html'><img src='img/logo.png' alt='ロゴ'></a>" +
   "<a href ='environment.html' class=environment>MyPCを持っている子は<br>こちら(環境構築編)</a>" +
   "<a href='another.html' class=another>別のことがしたい子は<br>こちら(番外編)</a>";
 let small_header_counter = 1;
