@@ -187,6 +187,14 @@ body main article section red {
   color: #ef4747;
 }
 
+body main article section u_black {
+  border-bottom: solid 2px #212121;
+}
+
+body main article section u_red {
+  border-bottom: solid 2px #ef4747;
+}
+
 body main article section pre {
   display: inline-block;
   overflow: auto;
