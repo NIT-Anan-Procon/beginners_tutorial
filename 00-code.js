@@ -56,6 +56,6 @@ $(".code").each(function () {
   in_html += ".replace(/@m/g,'</span>')";
   in_html += ");";
 
-  eval(in_html);
   code_counter++;
+  eval(in_html);
 });

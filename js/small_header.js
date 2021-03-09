@@ -24,8 +24,6 @@ for (
       sub_content_header_box[file_name_first_cp][small_header_counter + 1];
   }
 
-  console.log(txt);
-  console.log(in_html);
   small_header_counter++;
   txt = txt.replace("<section>", in_html);
 }
