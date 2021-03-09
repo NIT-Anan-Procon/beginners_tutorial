@@ -66,6 +66,7 @@ for (let i = 0; i < code_counter; i++) {
     in_html += ".replace(/m@/g,'<span style=\"color:#f0e68c\">')";
     in_html += ".replace(/@m/g,'</span>')";
     in_html += ");";
+
     eval(in_html);
     code_counter++;
   });
