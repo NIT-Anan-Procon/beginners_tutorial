@@ -56,5 +56,6 @@ $(".code").each(function () {
   in_html += ".replace(/m@/g,'<span style=\"color:#f0e68c\">')";
   in_html += ".replace(/@m/g,'</span>')";
   in_html += ");";
+
   eval(in_html);
 });
