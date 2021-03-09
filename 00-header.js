@@ -53,7 +53,7 @@ let small_header_box = [
 ];
 let sub_content_header_box = [
   ["環境構築編", "JDKとVSCode", "JDK", "VSCode"],
-  ["番外編", "別言語,GitHub,プレゼン資料", "別言語", "GitHub", "プレゼン資料"],
+  ["番外編", "GitHub,別言語,プレゼン資料", "GitHub", "別言語", "プレゼン資料"],
 ];
 let in_html =
   "<a href='index.html'><img src='img/logo.png' alt='ロゴ'></a>" +
