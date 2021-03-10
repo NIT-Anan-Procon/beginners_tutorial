@@ -16,7 +16,8 @@ function bottom_txt(left_txt, center_txt, right_txt) {
   if (
     file_name_first != 0 &&
     file_name_first !== "en" &&
-    file_name_first !== "an"
+    file_name_first !== "an" &&
+    file_name_last != big_middle_header_box[file_name_first].length - 1
   )
     if (file_name_first == 1 && file_name_last == 1)
       in_html = "<a href='index.html' class=bottom_left>" + left_txt + "</a>";
@@ -24,7 +25,8 @@ function bottom_txt(left_txt, center_txt, right_txt) {
       in_html =
         "<a href='" +
         ("00" + (file_name_first - 1)).slice(-2) +
-        ("00" + (big_middle_header_box[file_name_first - 1].length - 1)).slice(
+        "-" +
+        ("00" + (big_middle_header_box[file_name_first - 1].length - 2)).slice(
           -2
         ) +
         ".html' class=bottom_left>" +
@@ -44,12 +46,17 @@ function bottom_txt(left_txt, center_txt, right_txt) {
   if (
     file_name_first !== "en" &&
     file_name_first !== "an" &&
+    (file_name_last != big_middle_header_box[file_name_first].length - 1 ||
+      file_name_first == 0) &&
     !(
-      big_middle_header_box[file_name_first].length - 1 == file_name_last &&
+      big_middle_header_box[file_name_first].length - 2 == file_name_last &&
       big_middle_header_box[file_name_first + 1].length <= 1
     )
   )
-    if (big_middle_header_box[file_name_first].length - 1 == file_name_last)
+    if (
+      big_middle_header_box[file_name_first].length - 2 == file_name_last ||
+      file_name_first == 0
+    )
       in_html +=
         "<a href='" +
         ("00" + (file_name_first + 1)).slice(-2) +

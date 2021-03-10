@@ -12,7 +12,7 @@ else
       small_header_counter +
       ">" +
       small_header_box[file_name_first][file_name_last - 1][
-      small_header_counter - 1
+        small_header_counter - 1
       ];
     in_html += "</h3>";
 

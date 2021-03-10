@@ -69,7 +69,6 @@ body {
     grid-template:
       "content ... table"
       /62% 13% 25%;
-
     @media screen and (max-width: 1000px) {
       font-size: 1.2rem;
       line-height: 1.5rem;
@@ -137,6 +136,9 @@ body {
           }
         }
       }
+      ul {
+        padding-left: 1.7rem;
+      }
       section {
         h3 {
           font-size: 2rem;
@@ -190,7 +192,6 @@ body {
         grid-template:
           "... left center right ..."
           /15% 20% 30% 20% 15%;
-
         @media screen and (max-width: 1000px) {
           grid-template:
             "left center right"
