@@ -1,5 +1,4 @@
 let txt = article.outerHTML;
-console.log(file_name_first);
 if (file_name_first === "en") setSubSmallHeader(0);
 else if (file_name_first === "an") setSubSmallHeader(1);
 else
@@ -13,7 +12,7 @@ else
       small_header_counter +
       ">" +
       small_header_box[file_name_first][file_name_last - 1][
-        small_header_counter - 1
+      small_header_counter - 1
       ];
     in_html += "</h3>";
 
@@ -35,4 +34,4 @@ function setSubSmallHeader(file_name_first_cp) {
   }
 }
 
-article.innerHTML = txt;
+article.innerHTML = txt.slice(23, txt.length - 11);
