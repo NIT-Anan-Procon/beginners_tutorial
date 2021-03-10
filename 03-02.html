@@ -45,6 +45,11 @@
           <br>
           このようにデータ型の種類は<b>「○○型」</b>というように呼ぶことが多いです。
         </p>
+        <p>
+          データ型には様々な種類があります。
+          <br>
+          その中でも数値と文字のデータ型はよく使われるので説明していきます。
+        </p>
         <hr>
       </section>
 
@@ -67,9 +72,11 @@
           </tr>
         </table>
         <p>
-          <b>int型</b>の変数に入る<u>整数値とは<red>小数点以下を含まない数値</red></u>です。対して<b>
-            <red>double型</red>
-          </b>の変数に入る<u>実数値とは<red>小数点以下を含む数値</red></u>です。
+          <b>int型</b>の変数に入る<u>整数値とは<red>小数点以下を含まない数値</red></u>です。
+        </p>
+
+        <p>  
+          対して<b><red>double型</red></b>の変数に入る<u>実数値とは<red>小数点以下を含む数値</red></u>です。
         </p>
         <p>
           では実際に使ってみましょう。double型もint型と使い方は同じです。
@@ -79,7 +86,7 @@
         <pre class=code>
 class Number {
     public static void main(String args[]) {
-        @int integer = 1;
+        int integer = 1;
         double real = 1.2;
         System.out.println(integer);
         System.out.println(real);
@@ -95,26 +102,6 @@ class Number {
         </pre>
         <p>
           このようにdouble型もint型と同じように使えることがわかったと思います。
-        </p>
-        <p>
-          では、int型の変数に実数値を入れようとするとどうなるか…
-        </p>
-        <pre class=code>
-class Number {
-    public static void main(String args[]) {
-        @int integer = 1.2;
-        System.out.println(integer);
-    }
-}
-        </pre>
-        <p>
-          このプログラムを実行すると、このようなコンパイルエラーが発生すると思います。
-        </p>
-        <pre>
-エラー: 不適合な型: 精度が失われる可能性があるdoubleからintへの変換
-        </pre>
-        <p>
-          このエラーは今後習う演算を行うときに起こりやすいため、注意しましょう。
         </p>
         <hr>
       </section>
