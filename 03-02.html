@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <title>阿南高専プログラミング同好会1年生チュートリアル</title>
+  <link rel="icon" href="img/icon.ico">
+</head>
+
+<body>
+  <header id=header>
+    <script src="00-header.js"></script>
+  </header>
+  <main>
+    <article id=article>
+      <div id=big_header>
+        <script src="js/big_header.js"></script>
+      </div>
+      <div id=middle_header>
+        <script src="js/middle_header.js"></script>
+      </div>
+      <nav id=navigation>
+        <script src="js/navigation.js"></script>
+      </nav>
+      <section>
+        <p>
+          変数の型について説明します。
+        </p>
+        <p>
+          変数の宣言には型名が必要といいましたが、
+          <br>
+          変数の型のことを
+          <b>
+            <red>
+              データ型
+            </red>
+          </b>
+          と言います。
+        </p>
+        <p>
+          また、intで宣言した変数は「int型」変数と呼ばれます。
+          <br>
+          このようにデータ型の種類は<b>「○○型」</b>というように呼ぶことが多いです。
+        </p>
+        <p>
+          データ型には様々な種類があります。
+          <br>
+          その中でも数値と文字のデータ型はよく使われるので説明していきます。
+        </p>
+        <hr>
+      </section>
+
+      <section>
+        <p>
+          数値を表すデータ型は基本的に以下の2つだけです。
+        </p>
+        <table border="1" width="400" height="150">
+          <tr align="left">
+            <th>型名</th>
+            <th>数値の種類</th>
+          </tr>
+          <tr>
+            <td>int</td>
+            <td>整数値</td>
+          </tr>
+          <tr>
+            <td>double</td>
+            <td>実数値</td>
+          </tr>
+        </table>
+        <p>
+          <b>int型</b>の変数に入る<u>整数値とは<red>小数点以下を含まない数値</red></u>です。
+        </p>
+
+        <p>  
+          対して<b><red>double型</red></b>の変数に入る<u>実数値とは<red>小数点以下を含む数値</red></u>です。
+        </p>
+        <p>
+          では実際に使ってみましょう。double型もint型と使い方は同じです。
+          <br>
+          以下のプログラムはint型変数integerに1をdouble型変数realに1.2を入れたものです。
+        </p>
+        <pre class=code>
+class Number {
+    public static void main(String args[]) {
+        int integer = 1;
+        double real = 1.2;
+        System.out.println(integer);
+        System.out.println(real);
+    }
+}
+        </pre>
+        <p>
+          出力結果
+        </p>
+        <pre>
+1
+1.2
+        </pre>
+        <p>
+          このようにdouble型もint型と同じように使えることがわかったと思います。
+        </p>
+        <hr>
+      </section>
+      <section>
+        <p>
+          文字を入れる変数には
+          <br>
+          <b>文字を1文字だけ入れる変数</b>と<b>文字列を入れる変数</b>の2つがあります。
+        </p>
+        <table border="1" width="400" height="150">
+          <tr align="left">
+            <th>型名</th>
+            <th>入れるデータ</th>
+          </tr>
+          <tr>
+            <td>char</td>
+            <td>文字（1文字）</td>
+          </tr>
+          <tr>
+            <td>String</td>
+            <td>文字列</td>
+          </tr>
+        </table>
+        <p>
+          <b>
+            <red>cher型</red>
+          </b>は文字を一つだけ入れることができます。
+          <br>
+          代入するときは文字を<b>
+            <red>' '</red>
+          </b>
+          <red>(シングルクォーテーション)</red>で囲みましょう。
+        </p>
+        <p>
+          <b>
+            <red>String型</red>
+          </b>は文字列を入れることができます。
+          <br>
+          代入するときは<b>
+            <red>" "</red>
+            </red>
+          </b>
+          <red>(ダブルクォーテーション)</red>で囲みましょう。
+        </p>
+        <p>
+          では実際に使ってみましょう。
+          <br>
+          以下のプログラムはchar型変数Name1に'A'をString型変数Name2に"Java"を入れたものです。
+        </p>
+        <pre class=code>
+class Word {
+    public static void main(String args[]) {
+        char Name1 = 'A';
+        String Name2 = "Java"
+        System.out.println(Name1);
+        System.out.println(Name2);
+    }
+}
+        </pre>
+        <p>
+          出力結果
+        </p>
+        <pre>
+A
+Java
+        </pre>
+        <p>
+          これを使えば同じ文字列を何度も入力しなくてもよくなります。
+        </p>
+        <hr>
+      </section>
+      <script src="00-code.js"></script>
+      <div id=bottom>
+        <script src="js/bottom.js"></script>
+      </div>
+    </article>
+    <script src="js/small_header.js"></script>
+    <aside id=table>
+      <script src="js/table.js"></script>
+    </aside>
+  </main>
+  <footer id=footer>
+    <script src="js/footer.js"></script>
+  </footer>
+</body>
+
+</html>
