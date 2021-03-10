@@ -81,10 +81,13 @@ $(".code").each(function () {
     ============================================================================================ */
   ];
   function pushArray(word) {
-    for (let i = 0; i < (txt.match(new RegExp(word, "g")) || []).length; i++) {
+    while (txt.indexOf(word) != -1) {
       let txt_cp = txt
         .slice(txt.indexOf(word) + word.length, txt.length)
         .split("\x20");
+      let txt_cp2 = txt.slice(txt.indexOf(word) + 1);
+      txt = txt.slice(0, txt.indexOf(word) + 1) + "@";
+      txt += txt_cp2;
       if (txt_cp[0].indexOf("(") != -1)
         color[1].push(txt_cp[0].slice(0, txt_cp[0].indexOf("(") + 1));
       else if (txt_cp[0].indexOf(";") != -1)
@@ -101,6 +104,7 @@ $(".code").each(function () {
     let txt_cp = txt.slice(txt.indexOf("class") + 6, txt.length).split("\x20");
     color[3].push(txt_cp[0]);
   }
+  txt = txt.replace(/@/g, "");
   in_html = "$(this).html(txt";
   for (let i = 0; i < color.length; i++)
     for (let j = 1; j < color[i].length; j++) {
@@ -142,7 +146,18 @@ $(".code").each(function () {
     '\'<span style="color:#f08080">\\x20\\' +
     "\"')";
   in_html += ".replace(/\\\"\\)/g,'\\\"</span>\\)')";
+  in_html += ".replace(/\\\"\\;/g,'\\\"</span>\\;')";
   in_html += ".replace(/\\\"\\x20/g,'\\\"\\x20</span>')";
+  in_html +=
+    ".replace(/\\(\\" + "'/g,'" + '\\(<span style="color:#f08080">\\' + "'')";
+  in_html +=
+    ".replace(/\\x20\\" +
+    "'/g," +
+    '\'<span style="color:#f08080">\\x20\\' +
+    "'')";
+  in_html += ".replace(/\\'\\)/g,'\\'</span>\\)')";
+  in_html += ".replace(/\\'\\;/g,'\\'</span>\\;')";
+  in_html += ".replace(/\\'\\x20/g,'\\'\\x20</span>')";
   in_html += ".replace(/\\/\\" + "*/g,'<span style=\"color:#a0c238\">/*')";
   in_html += ".replace(/\\" + "*\\//g,'*\\/</span>')";
   in_html += ");";
