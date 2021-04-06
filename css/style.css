@@ -188,7 +188,7 @@ body main article section h3:before {
 }
 
 body main article section red {
-  color: #ef4747;
+  color: #f00;
 }
 
 body main article section u_black {
@@ -196,7 +196,7 @@ body main article section u_black {
 }
 
 body main article section u_red {
-  border-bottom: solid 2px #ef4747;
+  border-bottom: solid 2px #f00;
 }
 
 body main article section pre {

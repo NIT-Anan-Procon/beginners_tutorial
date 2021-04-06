@@ -24,7 +24,6 @@ $(".code").each(function () {
       "interface",
       "implements",
       "package",
-      "\\n",
     ],
     /* 修飾子など⇒青 */
 
@@ -160,6 +159,7 @@ $(".code").each(function () {
   in_html += ".replace(/\\'\\x20/g,'\\'\\x20</span>')";
   in_html += ".replace(/\\/\\" + "*/g,'<span style=\"color:#a0c238\">/*')";
   in_html += ".replace(/\\" + "*\\//g,'*\\/</span>')";
+  in_html += ".replace(/\\\\n/g,'<span style=\"color:#4169e1\">\\\\n</span>')";
   in_html += ");";
 
   eval(in_html);
