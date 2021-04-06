@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <title>プロコン部1年生チュートリアル</title>
+  <link rel="icon" href="img/icon.ico">
+</head>
+
+<body>
+  <header id=header>
+    <script src="00-header.js"></script>
+  </header>
+  <main>
+    <article id=article>
+      <div id=big_header>
+        <script src="js/big_header.js"></script>
+      </div>
+      <div id=middle_header>
+        <script src="js/middle_header.js"></script>
+      </div>
+      <nav id=navigation>
+        <script src="js/navigation.js"></script>
+      </nav>
+
+      <section>
+        <p>
+          では実際に計算をしてみましょう。
+          <br>
+            コンピューターで計算をすることを<b><red>演算</red></b>と言います。
+        </p>
+        <p>
+          演算を行うには+や-などの</b><red>演算子</red></b>を使う必要があります。
+          <br>
+            以下の表に演算子をまとめます。
+        </p>
+        <table border="1" width="400" height="150">
+          <tr align="left">
+            <th>演算子</th>
+            <th>行える計算</th>
+          </tr>
+          <tr>
+            <td>+</td>
+            <td>加算（足し算）</td>
+          </tr>
+          <tr>
+            <td>-</td>
+            <td>減算（引き算）</td>
+          </tr>
+          <tr>
+            <td>*</td>
+            <td>乗算（掛け算）</td>
+          </tr>
+          <tr>
+            <td>/</td>
+            <td>除算（割り算）</td>
+          </tr>
+          <tr>
+            <td>%</td>
+            <td>除算のあまり</td>
+          </tr>
+        </table>
+        <p>
+          では実際に使ってみましょう。
+          <br>
+            以下は、ここで紹介した演算子を一通り使ってみた例です。
+        </p>
+        <pre class=code>
+class Calculation {
+    public static void main(String args[]) {
+        System.out.println(10 + 3);
+        System.out.println(10 - 3);
+        System.out.println(10 * 3);
+        System.out.println(10 / 3);
+        System.out.println(10 % 3);
+    }
+}
+        </pre>
+        <p>
+          出力結果
+        </p>
+        <pre>
+13
+7
+30
+3
+1
+        </pre>
+        <p>
+        <red>10/3(10÷3)の計算結果が 3 になる</red>ことに注目してください。ここでは<b>どの数値も整数として計算</b>しているので、結果も整数になります。
+        <br>
+        また計算の順序は数学で習ったものと同じです。（乗算除算優先）
+        </p>
+        <p>
+          変数に計算結果を代入したり、変数同士で計算することも可能です。
+          <br>
+          以下はその一例です
+        </p>
+        <pre class=code>
+class Calculation2 {
+    public static void main(String args[]) {
+        int number1 = 10 + 3;
+        int number2 = 10;
+        number2 = number1 + number2
+        System.out.println(number1);
+        System.out.println(number2);
+    }
+}
+        </pre>
+        <p>
+          出力結果
+        </p>
+        <pre>
+13
+23
+        </pre>
+        <hr>
+      </section>
+
+      <section>
+        <p>
+          先程の「number2 = number1 + number2」は
+          <br>
+          <b>「number2 += number1」</b>と省略することができます。
+        </p>
+        <p>
+          この代入と演算を合わせた演算子を<b><red>代入演算子</red></b>と言います。
+          <br>
+          以下の表に演算子をまとめます。
+        </p>
+        <table border="1" width="400" height="150">
+          <tr align="left">
+            <th>代入演算子</th>
+            <th>行える計算</th>
+          </tr>
+          <tr>
+            <td>+=</td>
+            <td>a = a + b</td>
+          </tr>
+          <tr>
+            <td>-=</td>
+            <td>a = a - b</td>
+          </tr>
+          <tr>
+            <td>*=</td>
+            <td>a = a * b</td>
+          </tr>
+          <tr>
+            <td>/=</td>
+            <td>a = a / b</td>
+          </tr>
+          <tr>
+            <td>%=</td>
+            <td>a = a % b</td>
+          </tr>
+        </table>
+        <p>
+          では実際に使ってみましょう。
+          <br>
+          以下は、「+=」を使った例です。
+        </p>
+        <pre class=code>
+class Calculation3 {
+    public static void main(String args[]) {
+        int number1 = 10;
+        int number2 = 3;
+        number2 += number1;
+        System.out.println(number1);
+    }
+}
+        </pre>
+        <p>
+          出力結果
+        </p>
+        <pre>
+13
+        </pre>
+        <hr>
+
+      </section>
+
+      <script src="00-code.js"></script>
+      <div id=bottom>
+        <script src="js/bottom.js"></script>
+      </div>
+    </article>
+    <script src="js/small_header.js"></script>
+    <aside id=table>
+      <script src="js/table.js"></script>
+    </aside>
+  </main>
+  <footer id=footer>
+    <script src="js/footer.js"></script>
+  </footer>
+</body>
+
+</html>
