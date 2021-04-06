@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <title>プロコン部1年生チュートリアル</title>
+  <link rel="icon" href="img/icon.ico">
+</head>
+
+<body>
+  <header id=header>
+    <script src="00-header.js"></script>
+  </header>
+  <main>
+    <article id=article>
+      <div id=big_header>
+        <script src="js/big_header.js"></script>
+      </div>
+      <div id=middle_header>
+        <script src="js/middle_header.js"></script>
+      </div>
+      <nav id=navigation>
+        <script src="js/navigation.js"></script>
+      </nav>
+      <section>
+        <p>
+          今まで、決められた値でしかプログラムが動かないのは面白くなかったですよね。
+        </p>
+        <p>
+          そこで！今回はプログラムを実行した後に入力できるようにしたいと思います。
+        </p>
+        <p>
+          まずは以下のコードを書いてください。まだ理解する必要はありません。
+        </p>
+        <pre class="code">
+import java.util.Scanner
+
+class Printer {
+    public static void main(String args[]) {
+        Scanner sc;
+        String name;
+        int age;
+
+        name = sc.next();
+        age = sc.nextInt();
+
+        System.out.println(name + "は" + age + "歳です。");
+    }
+}
+        </pre>
+        <p>
+          一番上の<red><b>import java.util.Scanner</b></red>は入力機能のために必要なものをダウンロードしていると考えてください。
+        </p>
+        <p>
+          そしてmainの中に<red><b>Scanner sc;</b></red>を書きます。これは、上でダウンロードしてきたものを使えるようにしていると考えてください。
+        </p>
+        <p>
+          最後に、実際に入力できるようにしたいときは、
+        </p>
+        <pre>
+変数 = sc.next();
+        </pre>
+        <p>
+          のように書きます。こうすることで、入力した文字を指定した変数に入れることができるようになるのです。
+        </p>
+        <p>
+          ちなみに<red>nextInt()</red>の方は数値専用となります。
+        </p>
+        <p>
+          実行してみて、初めに名前を、次に年齢を入力してみましょう。
+        </p>
+        <p>入力内容</p>
+        <pre>
+太郎
+16
+        </pre>
+        <p>
+          出力結果
+        </p>
+        <pre>
+太郎は16歳です。
+        </pre>
+        <p>
+          実際には、入力する前の段階で<b>名前を入力してください</b>といったように表示しておくと良いでしょう。
+        </p>
+        <hr>
+      </section>
+      <script src="00-code.js"></script>
+      <div id=bottom>
+        <script src="js/bottom.js"></script>
+      </div>
+    </article>
+    <script src="js/small_header.js"></script>
+    <aside id=table>
+      <script src="js/table.js"></script>
+    </aside>
+  </main>
+  <footer id=footer>
+    <script src="js/footer.js"></script>
+  </footer>
+</body>
+
+</html>
