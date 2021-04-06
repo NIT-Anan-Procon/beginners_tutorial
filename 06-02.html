@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <title>プロコン部1年生チュートリアル</title>
+  <link rel="icon" href="img/icon.ico">
+</head>
+
+<body>
+  <header id=header>
+    <script src="00-header.js"></script>
+  </header>
+  <main>
+    <article id=article>
+      <div id=big_header>
+        <script src="js/big_header.js"></script>
+      </div>
+      <div id=middle_header>
+        <script src="js/middle_header.js"></script>
+      </div>
+      <nav id=navigation>
+        <script src="js/navigation.js"></script>
+      </nav>
+      <section>
+        <p>
+          1つの条件だけでは不便なので、複数の条件を作りたいときはどうすればいいのか。
+        </p>
+        <p>
+          <red><b>else if</b></red>というものを使います。実際に見てみましょう。
+        </p>
+        <pre class="code">
+class CheckRank {
+    public static void main(String args[]) {
+        Scanner sc;
+        int score;
+        score = sc.nextInt();
+
+        if(score >= 80) {
+            System.out.println("優");
+        } else if(score >= 70) {
+            System.out.println("良");
+        } else if(score >= 60) {
+            System.out.println("可");
+        } else {
+            System.out.println("不可");
+        }
+    }
+}
+        </pre>
+        <p>
+          「else if」を使うと、<b>「AじゃないけどBのとき」</b>のような処理ができます。
+        </p>
+        <p>
+          上の例では、もし75点を入力した場合、最初の条件ではじかれて、2番目の条件で引っ掛かります。
+          <br>
+          2番目の条件文は「70点以上」ですが、実際には初めの条件の影響で「70～79点」ということになります。
+        </p>
+        <hr>
+      </section>
+      <section>
+        <p>もし上の例で、優からさらに分けたいときにどうすればいいでしょう。</p>
+        <p>
+          そういうときはif文の中にさらにif文を書きます。
+        </p>
+        <p>
+          これをネストと言って、「Aのとき、さらにBのとき」といった処理ができるようになります。
+        </p>
+        <pre class="code">
+class CheckRank {
+    public static void main(String args[]) {
+        Scanner sc;
+        int score;
+        score = sc.nextInt();
+
+        if(score >= 80) {
+            if(score == 100)
+                System.out.println("優：満点です");
+            else
+                System.out.println("優：惜しい");
+        } else if(score >= 70) {
+            System.out.println("良");
+        } else if(score >= 60) {
+            System.out.println("可");
+        } else {
+            System.out.println("不可");
+        }
+    }
+}
+        </pre>
+        <p>
+          このように同じ条件でも、そのあと別々の処理をすることができます。
+        </p>
+        <hr>
+      </section>
+      <section>
+        <p>
+          今後条件が多くなっていくと「AかつBかつCのとき」といった条件文も出てきます。
+        </p>
+        <p>
+          先程説明したネストを使ってもいいですが、もっと簡単な方法があります。
+          <br>
+          それが<red><b>論理演算子</b></red>です。
+        </p>
+        <p>
+          先に種類を説明します。
+        </p>
+        <table border="1" width="400" height="150">
+          <tr align="left">
+            <th>演算子</th>
+            <th>意味</th>
+          </tr>
+          <tr>
+            <td>&&</td>
+            <td>かつ</td>
+          </tr>
+          <tr>
+            <td>||</td>
+            <td>または</td>
+          </tr>
+          <tr>
+            <td>!</td>
+            <td>～ではない</td>
+          </tr>
+        </table>
+        <p>
+          例えば「AでさらにBのとき」なら
+        </p>
+        <pre>
+A && B
+        </pre>
+        <p>
+          「AでもBでもどっちでもいいとき」なら
+        </p>
+        <pre>
+A || B
+        </pre>
+        <p>
+          というようにすることで、条件文をまとめることができます。
+        </p>
+        <pre>
+!A
+        </pre>
+        <p>のようにすると、「Aではないとき」というふうにすることもできます。</p>
+        <p>
+          実際に書いてみましょう。もし良だけを判定したいとき。
+        </p>
+        <pre class="code">
+class CheckRank {
+    public static void main(String args[]) {
+        Scanner sc;
+        int score;
+        score = sc.nextInt();
+
+        if(score >= 70 && score < 80) {
+            System.out.println("良");
+        }
+    }
+}
+        </pre>
+        <p>こうすれば、70以上かつ80未満のときだけ良が表示されます。</p>
+        <hr>
+      </section>
+      <script src="00-code.js"></script>
+      <div id=bottom>
+        <script src="js/bottom.js"></script>
+      </div>
+    </article>
+    <script src="js/small_header.js"></script>
+    <aside id=table>
+      <script src="js/table.js"></script>
+    </aside>
+  </main>
+  <footer id=footer>
+    <script src="js/footer.js"></script>
+  </footer>
+</body>
+
+</html>

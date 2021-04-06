@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <title>プロコン部1年生チュートリアル</title>
+  <link rel="icon" href="img/icon.ico">
+</head>
+
+<body>
+  <header id=header>
+    <script src="00-header.js"></script>
+  </header>
+  <main>
+    <article id=article>
+      <div id=big_header>
+        <script src="js/big_header.js"></script>
+      </div>
+      <div id=middle_header>
+        <script src="js/middle_header.js"></script>
+      </div>
+      <nav id=navigation>
+        <script src="js/navigation.js"></script>
+      </nav>
+      <section>
+        <p>
+          毎回決められた処理をするのは面白くないので、今回は<red>if文</red>について説明したいと思います。
+        </p>
+        <p>
+          if文とは、ifの意味で分かるように、<b>「もし～ならAの処理、そうじゃないならBの処理」</b>というふうに場合によって処理を分けることができるのです。
+        </p>
+        <p>
+          実際に書いてみましょう。
+        </p>
+        <pre class="code">
+import java.util.Scanner
+
+class CheckAdult {
+    public static void main(String args[]) {
+        Scanner sc;
+        int age;
+        age = sc.nextInt();
+
+        if(age < 18)
+            System.out.println("18歳未満");
+        else
+            System.out.println("18歳以上");
+    }
+}
+        </pre>
+        <p>
+          ifの括弧の中に書いてあるのは<red><b>条件式</b></red>と呼ばれ、正しいか間違っているかを判断する式です。
+        </p>
+        <p>
+          そして、その下に処理を書くことで条件分岐を作ることができます。
+        </p>
+        <p>
+          今回であれば<b>「ageの中に入っている値が18よりも大きいとき18歳未満と表示」</b>、<b>「そうでないとき18歳以上と表示」</b>という分かれ方をしています。
+        </p>
+        <hr>
+      </section>
+      <section>
+        <p>
+          先ほど使った「<(小なり)」という記号、これは<red><b>比較演算子</b></red>の一種となります。基本的には数学と同じで、
+        </p>
+        <table border="1" width="400" height="150">
+          <tr align="left">
+            <th>演算子</th>
+            <th>意味</th>
+          </tr>
+          <tr>
+            <td>&gt</td>
+            <td>より大きい</td>
+          </tr>
+          <tr>
+            <td>&lt</td>
+            <td>より小さい</td>
+          </tr>
+          <tr>
+            <td>&gt=</td>
+            <td>以上</td>
+          </tr>
+          <tr>
+            <td>&lt=</td>
+            <td>以下</td>
+          </tr>
+          <tr>
+            <td>==</td>
+            <td>等しい</td>
+          </tr>
+          <tr>
+            <td>!=</td>
+            <td>等しくない</td>
+          </tr>
+        </table>
+        <p>
+          となり、等しいのときに<b>イコールを2個使う</b>のに注意です。
+        </p>
+        <hr>
+      </section>
+      <section>
+        <p>
+          普通のif文では<red>処理は1つしか</red>できません。それでは2つ以上の処理をしたいときはどうすればいいでしょうか。
+        </p>
+        <p>
+          それは
+          <red>波括弧を使う</red>
+          ことで解決できます。今まで書いてきたclassの波括弧のように、その中に入っているということを示すために使うことができ、if文や今後やる他の制御文も2つ以上の処理を書くことができます。
+        </p>
+        <pre class="code">
+import java.util.Scanner
+
+class CheckAdult {
+    public static void main(String args[]) {
+        Scanner sc;
+        int age;
+        age = sc.nextInt();
+
+        if(age < 18) {
+            System.out.println("18歳未満");
+            System.out.println("未成年です");
+        } else {
+            System.out.println("18歳以上");
+            System.out.println("成年です");
+        }
+    }
+}
+        </pre>
+        <p>
+          波括弧を使って、1つの処理だけしか書かないということも可能です。
+        </p>
+        <hr>
+      </section>
+      <script src="00-code.js"></script>
+      <div id=bottom>
+        <script src="js/bottom.js"></script>
+      </div>
+    </article>
+    <script src="js/small_header.js"></script>
+    <aside id=table>
+      <script src="js/table.js"></script>
+    </aside>
+  </main>
+  <footer id=footer>
+    <script src="js/footer.js"></script>
+  </footer>
+</body>
+
+</html>
