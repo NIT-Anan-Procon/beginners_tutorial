@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <title>プロコン部1年生チュートリアル</title>
+  <link rel="icon" href="img/icon.ico">
+</head>
+
+<body>
+  <header id=header>
+    <script src="00-header.js"></script>
+  </header>
+  <main>
+    <article id=article>
+      <div id=big_header>
+        <script src="js/big_header.js"></script>
+      </div>
+      <div id=middle_header>
+        <script src="js/middle_header.js"></script>
+      </div>
+      <nav id=navigation>
+        <script src="js/navigation.js"></script>
+      </nav>
+
+      <section>
+        <p>
+          次に実数でも計算してみましょう。
+          <br>
+          演算子は整数の時と同じですが、代入できる変数はdouble型変数である点に注意しましょう。
+          <br>
+          以下はその一例です。
+        </p>
+        <pre class=code>
+class Calculation3 {
+    public static void main(String args[]) {
+        double real1 = 5.0, real2 = 3.0;
+        System.out.println(real1 + real2);
+        System.out.println(real1 - real2);
+        System.out.println(real1 * real2);
+        System.out.println(real1 / real2);
+    }
+}
+        </pre>
+        <p>
+          出力結果
+        </p>
+        <pre>
+8.0
+2.0
+15.0
+1.6666666666666667
+        </pre>
+        <p>
+          このように実数値同士で計算すると演算結果は実数値になります。
+        </p>
+        <hr>
+      </section>
+
+      <section>
+        <p>
+          では整数と実数とで演算するとどうなるのでしょうか。
+          <br>
+          以下はその一例です。
+        </p>
+        <pre class=code>
+class Calculation3 {
+    public static void main(String args[]) {
+        int integer = 10
+        double real = 1.2;
+        System.out.println(integer + real);
+    }
+}
+        </pre>
+        <p>
+          出力結果
+        </p>
+        <pre>
+11.2
+        </pre>
+
+        <p>
+          このように演算結果はdouble型になります。
+        </p>
+        <p>
+          なぜこのようになるかというと、
+          <br>
+          演算は異なる型同士で行った場合<red>表現範囲の大きい方に調整される</red>という性質があります。
+        </p>
+        <p>
+          int型は表現できる範囲が整数だけですが、double型は小数点以下の値まで表現できるため、<b>int型よりもdoubleの方が表示範囲が大きい</b>から演算結果はdouble型になったというわけです。
+        </p>
+        <hr>
+      </section>
+
+      <script src="00-code.js"></script>
+      <div id=bottom>
+        <script src="js/bottom.js"></script>
+      </div>
+    </article>
+    <script src="js/small_header.js"></script>
+    <aside id=table>
+      <script src="js/table.js"></script>
+    </aside>
+  </main>
+  <footer id=footer>
+    <script src="js/footer.js"></script>
+  </footer>
+</body>
+
+</html>
