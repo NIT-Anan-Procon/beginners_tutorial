@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <title>プロコン部1年生チュートリアル</title>
+  <link rel="icon" href="img/icon.ico">
+</head>
+
+<body>
+  <header id=header>
+    <script src="00-header.js"></script>
+  </header>
+  <main>
+    <article id=article>
+      <div id=big_header>
+        <script src="js/big_header.js"></script>
+      </div>
+      <div id=middle_header>
+        <script src="js/middle_header.js"></script>
+      </div>
+      <nav id=navigation>
+        <script src="js/navigation.js"></script>
+      </nav>
+
+      <section>
+        <p>
+          次に文字列と演算子についでです。
+        </p>
+        <p>
+          文字列は数値ではないため計算はできませんが、<red>文字列の結合は「+」の演算子</red>でできます。以下はその一例です。
+        </p>
+        <pre class=code>
+class Puls {
+    public static void main(String args[]) {
+        String str1, str2, str3;
+        str1 = "情報";
+        str2 = "コース";
+        str3 = str1 + str2;
+        System.out.println(str3);
+    }
+}
+        </pre>
+        <p>
+          出力結果
+        </p>
+        <pre>
+情報コース
+        </pre>
+        <p>
+          また、文字列と数値を「+」の演算子でつなげると<b>数値は文字列に変換</b>されて結合されます。以下はその一例です。
+        </p>
+        <pre class=code>
+class Puls {
+    public static void main(String args[]) {
+        String str1,str2;
+        str1 = "No." + 2;
+        str2 = 1 + 2 + ":" + 1 + 4;
+        System.out.println(str1);
+        System.out.println(str2);
+    }
+}
+        </pre>
+        <p>
+          出力結果
+        </p>
+        <pre>
+No.2
+3:14
+        </pre>
+        <p>
+          str2が少しややこしいので説明すると、
+          <br>
+          最初の「1 + 2」は<red>数値として計算され3</red>となります。その後は「":"」が続くので<red>3は文字列に変換</red>されて":"が連結されます。続く「1 + 4」は3:が文字列であるため<red>1と4は文字列に変換され</red>連結します。
+        </p>
+        <hr>
+      </section>
+
+      <script src="00-code.js"></script>
+      <div id=bottom>
+        <script src="js/bottom.js"></script>
+      </div>
+    </article>
+    <script src="js/small_header.js"></script>
+    <aside id=table>
+      <script src="js/table.js"></script>
+    </aside>
+  </main>
+  <footer id=footer>
+    <script src="js/footer.js"></script>
+  </footer>
+</body>
+
+</html>
